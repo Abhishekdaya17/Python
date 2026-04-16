@@ -1,0 +1,8 @@
+print("===Resume===")
+print("Name  :Alice Johnson")
+print("Email :alice@example.com")
+print("Skill :")
+print("-Java")
+print("-HTML & CSS")
+print("-Problem Solving")
+print("Experience: 2 year at XYZ ltd.")

@@ -1,0 +1,5 @@
+print("===Welcome to Coffee shop===")
+print("1.Epresso $3")
+print("2.latte $4")
+print("3.Cappunccino $5")
+print("=====================")

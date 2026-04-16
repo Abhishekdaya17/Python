@@ -1,0 +1,20 @@
+'''4. Gym Membership Eligibility Checker
+#    A gym checks multiple conditions:
+
+# * If age ≥ 18 → Allowed for gym
+# * If BMI > 25 → Suggest weight loss program
+
+# Input:
+# Enter age: 25
+# Enter BMI: 27
+
+# Output:
+# Gym access granted
+# Enroll in weight loss program
+# '''
+ag=int(input("Enter age:"))
+bm=int(input("Enter BMI:"))
+if ag>=18:
+    print("Gym access granted")
+if bm>=27:
+    print("Enroll in weight loss program")
