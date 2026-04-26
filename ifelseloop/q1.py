@@ -19,11 +19,11 @@ el=int(input("Existing loan="))
 if sal>=30000:
 	if cs>=750:
             print("loan approved")
-	else:
+    else:
 		if el<=2:
 			print("conditionaly approved")
 		else:
 			print("loan rejected")
 else:
-	print("loan rejected")
+print("loan rejected")
          

@@ -26,7 +26,7 @@ u6=int(input("Unit6="))
 if u1>u2:
 	if u1>u3:
 		if u1>u4:
-			if u1>u5:
+			if u1>u5:	
 				if u1>u6:
 					print(u1)
 				else:
