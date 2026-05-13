@@ -18,3 +18,4 @@ ra=mrp-dp
 twi=(10*(ra))/100+ra
 mi=twi/mt
 print("Remaining amount=",ra,"/n","total with interest=",twi,"/n","maonthly emi=",mi) 
+h
