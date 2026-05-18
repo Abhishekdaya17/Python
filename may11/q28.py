@@ -19,4 +19,5 @@ while i<=n:
                 print("*",end="")
             else:
                 print(" ",end="")
+    i=i+1
                 

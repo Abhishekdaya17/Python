@@ -7,12 +7,17 @@
 
 '''
 n=int(input("input:"))
-i=0
-while i<=2*n:
-    for k in range(i,2*i,-1):
-            print(k,end="")
-    for j in range(i+1,n):
-        print("-",end="")
-    
+i=1
+while i<=n:
     print()
-    i=i+2
+    j=i
+    k=2*(i-1)
+    while j>1:
+        print(k,end="")
+        k=k-1
+        j=j-1
+    j=n
+    while j>i:
+        print("-",end="")
+        j=j-1
+    i=i+1

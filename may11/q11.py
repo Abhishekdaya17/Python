@@ -1,3 +1,11 @@
+'''1      1
+    12    21
+    123  321
+    12344321
+    123  321
+    12    21
+    1      1'''
+
 n=int(input("input:"))
 i=1
 
@@ -9,7 +17,7 @@ while i<=n:
 
 
     for k in range(n,i,-1):
-        print("**",end="")
+        print("  ",end="")
     for l in range(i,0,-1):
         print(l,end="")
 
@@ -25,7 +33,7 @@ while o>=1:
 
     
     for q in range(n,o,-1):
-        print("**",end="")
+        print("  ",end="")
 
     
     for s in range(o,0,-1):
