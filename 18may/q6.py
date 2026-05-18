@@ -1,0 +1,20 @@
+'''6.
+
+Product Code Verification System
+
+An e-commerce company wants to verify whether two product codes are rearranged versions of each other.
+
+Conditions:
+- Ignore spaces
+- Ignore case sensitivity
+
+Input:
+Enter first product code: Dormitory
+Enter second product code: Dirty Room
+
+Output:
+Both Product Codes are Matching'''
+n1=input("input:").lower()
+n2=input("input:").lower()
+str1=ord(n1[0])
+
