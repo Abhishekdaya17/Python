@@ -1,0 +1,1 @@
+'''60Append two strings but remove duplicate adjacent characters. S1 = "miss", S2 = "issippi" "misisipi" 6'''
