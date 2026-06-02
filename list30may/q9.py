@@ -101,3 +101,37 @@ Output:
 Happy Numbers = []
 Count = 0
 Largest Happy Number = Not Available'''
+n=int(input("Enter the number of element: "))
+
+l=[]
+for i in range(n):
+    x=int(input("Enter the element "))
+    l.append(x)
+
+happy=[]
+for i in l:
+    if i<9:
+       j=i**2
+    else:
+        j=i
+    while True:
+        if j>9:
+            sum=0
+            for k in str(j):
+                k=int(k)
+                sum=sum+k**2
+            j=sum
+        else:
+            if j==1:
+                happy.append(i)
+            else:
+                pass
+            break
+print(happy)
+print("Count =",len(happy))
+
+if len(happy)>0:
+     ma=max(happy)
+else:
+    ma="Not Available"
+print("Largest Happy Number =",ma)
