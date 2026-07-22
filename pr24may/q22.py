@@ -1,4 +1,4 @@
-'''22Find the last repeating character. S = "abracadabra" r' 2'''
+'''22Find the last repeating character. S = "abracadabra" r' '''
 s=input("input:")
 
 
@@ -14,7 +14,11 @@ for i in range(0,len(s)):
         ch1=n[j]
         if ch==ch1:
             count=count+1
+            if count>=2:
+                if ch not in res:
+                    res=res+ch
     if count<=lowest:
         lowest=count
-        res=ch
+        
 print(res)
+print(res[-1])

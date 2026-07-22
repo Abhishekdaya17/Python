@@ -1,0 +1,583 @@
+1)string questions
+#1. 
+'''s = "Python"
+print(s[0])
+->  P '''
+
+#2.
+'''s = "Hello"
+print(len(s))
+-> 5 '''
+
+#3
+'''for i in range(2):
+	for j in range(2):
+		print("*", end="")
+-> (B) **** '''
+
+#4
+'''s = "Programming"
+print(s[-1])
+-> B) g'''
+
+#5
+'''s = "Python"
+print(s[1:4])
+b) yth'''
+
+#6
+'''for i in range(3):
+	for j in range(i):
+		print(j, end="")
+-> 001 '''
+
+#7
+'''s = "abcdef"
+print(s[::2])
+-> ace  '''
+
+#8
+'''for i in range(3):
+	for j in range(2):
+		print("Hi")
+-> 6 times "Hi"'''
+
+#9
+'''s = "Python"
+print(s[::-1])
+A) nohtyP '''
+
+#10
+'''s = "Computer"
+print(s[2:-2])
+-> A) mput'''
+
+
+#11
+'''for i in range(2):
+	for j in range(3):
+		print(i+j, end=" ")
+->   A) 0 1 2 1 2 3'''
+
+
+#12
+'''s = "Python"
+print(s[10:])
+-> C) "" (empty string)'''
+
+#13
+'''s = "abcdef"
+print(s[-4:-1])
+-> B) cde'''
+
+#14
+'''s = "DataScience"
+print(s[4:])
+-> B) Science'''
+
+#15
+'''count = 0
+for i in range(4):
+	for j in range(4):
+		count += 1
+print(count)
+-> C) 16'''
+
+#16
+'''s = "PYTHON"
+print(s[-1:-5:-1])
+-> A) NOHT'''
+
+#17
+'''for i in range(1,4):
+	for j in range(i,4):
+		print("*", end="")
+	print()
+-> A)
+***
+**
+*'''
+
+#18
+'''s = "abcdefghij"
+print(s[8:2:-2])
+-> ige'''
+
+#19
+'''s = "Python"
+for i in range(len(s)):
+	print(s[:i], end="|")
+-> A)
+|P|Py|Pyt|Pyth|Pytho|'''
+
+
+#20
+'''s = "ABCDE"
+for i in range(len(s)):
+	for j in range(i, len(s)):
+		print(s[j], end="")
+	print()
+-> A)
+ABCDE
+BCDE
+CDE
+DE
+E'''
+
+
+
+
+
+2) string iteration and immutablitity
+
+
+
+
+#1. Which loop is most commonly used to iterate through a string? -> B) for
+
+#2. What will be the output?
+'''s = "Python"
+for ch in s:
+	print(ch, end=" ")
+-> B) P y t h o n '''
+
+#3. Which operator checks membership in a string? -> C) in
+
+#4. What will be the output?
+'''print("a" in "apple")
+-> C) True'''
+
+#5. Which function returns both index and value while iterating? -> C) enumerate()
+
+#6. What is the output?
+'''for i, ch in enumerate("ABC"):
+	print(i, ch)
+-> A) 
+0 A
+1 B
+2 C'''
+
+#7. What is the starting index of enumerate() by default? -> C) 0
+
+#8. Which of the following is a valid while loop for string iteration?
+'''i = 0
+while i < len(s):
+	print(s[i])
+	i += 1
+-> A)'''
+
+#9. Strings in Python are: -> C) Immutable
+
+#10. What will happen?
+'''s = "Hello"
+s[0] = "Y"
+-> C) TypeError'''
+
+#11. To change a string, we need to: -> B) Create a new string
+
+#12. What is the output?
+'''s = "Python"
+print(s[2])
+-> B) t'''
+
+#13. Which statement is TRUE about strings? -> B) They are immutable.
+
+#14. What will be the output?
+'''s = "Code"
+for i in range(len(s)):
+	print(s[i], end="")
+-> B) Code'''
+
+#15. Which function is mainly used when both index and value are required? -> C) enumerate()
+
+#16. What will be the output?
+'''print("z" in "python")
+-> B) False'''
+
+#17. Which keyword is used for membership testing? -> B) in
+
+#18. What will be the output?
+'''s = "ABC"
+i = 0
+while i < len(s):
+	print(s[i], end="")
+	i += 1
+-> A) ABC'''
+
+#19. Which of the following demonstrates string immutability? -> A) s[0] = 'A'
+
+#20. What is the output?
+'''for i, ch in enumerate("Hi", start=1):
+	print(i, ch)
+-> A)
+1 H
+2 i'''
+
+
+
+
+3)string  interning and reasons
+
+
+
+
+#1. What is the primary purpose of string interning in Python? -> B) To optimize memory usage and speed up comparisons by reusing a single object for identical string literals.
+
+#2. Which of the following code blocks will output True due to Python's implicit string interning?
+'''a = "python_3"
+b = "python_3"
+print(a is b)
+-> B)'''
+
+#3. If you need to force Python to intern a dynamically generated string at runtime, which function should you use? -> B) sys.intern()
+
+#4. Why does string interning require strings to be immutable? -> B) Because if a shared interned string were mutated, it would unexpectedly change the value of that string for all other variables referencing it.
+
+#5. Consider the following code:
+'''import sys
+s1 = sys.intern("dynamic_string" + "123")
+s2 = "dynamic_string123"
+print(s1 is s2)
+-> A) True'''
+
+#6. Which statement is TRUE regarding the comparison of two long, identical interned strings? -> B) Python can compare their memory addresses using pointer equality, taking O(1) time.
+
+#7. What happens if you try to run the following code?
+'''language = "Python"
+del language[0]
+-> B) TypeError: 'str' object doesn't support item deletion'''
+
+#8. How can you effectively delete the variable reference itself so that using it again causes a NameError? -> C) del text
+
+#9. What is the idiomatic way to "delete" all occurrences of a specific character from a Python string? -> B) s.replace('a', '')
+
+#10. Consider the code below:
+'''msg = "B-a-n-a-n-a"
+clean_msg = "".join(msg.split("-"))
+-> B) Banana; the original msg remains completely unchanged in memory.'''
+
+#11. You want to delete trailing characters from a string only if they match a specific suffix. Which method is cleanest in modern Python (3.9+)? -> B) s.removesuffix("suffix")
+
+#12. What does the following expression evaluate to?
+'''" hello ".strip()
+-> C) "hello"'''
+
+#13. What is the output of the following slice-based string manipulation?
+'''word = "Indore"
+print(word[1:5:2])
+-> C) no'''
+
+#14. What does the find() method return if the substring is NOT found? -> C) -1
+
+#15. What is the output of this code snippet?
+'''data = "apple,banana,cherry,dates"
+print(data.split(",", 2))
+-> A) ['apple', 'banana', 'cherry,dates']'''
+
+#16. Which method will return True for the string "12³"? -> C) Both A and B
+
+#17. How does the partition() method behave differently from split()? -> B) It always returns a 3-tuple containing: part before the separator, the separator itself, and the part after the separator.
+
+#18. What is the output of the following code?
+'''text = "python programming"
+print(text.title())
+-> C) Python Programming'''
+
+#19. Consider the following code using zfill():
+'''num = "-42"
+print(num.zfill(5))
+-> B) -0042'''
+
+#20. What will be the output of the expression below?
+'''"abc".center(7, "*")
+-> B) **abc**'''
+
+
+
+4)list introduction and internal working
+
+
+
+
+
+#1. Which data type is used to store multiple values in Python? -> B) list
+
+#2. Which symbol is used to create a list? -> C) []
+
+#3. What will be the output?
+'''a = [1, 2, 3]
+print(a[1])
+-> B) 2'''
+
+#4. Lists in Python are: -> C) Mutable
+
+#5. Which method is used to add a single element at the end of a list? -> B) append()
+
+#6. What will be the output?
+'''a = [10, 20]
+a.append(30)
+print(a)
+-> B) [10, 20, 30]'''
+
+#7. Which function returns the length of a list? -> C) len()
+
+#8. Which of the following is a valid nested list? -> A) [1, 2, [3, 4]]
+
+#9. What will be the output?
+'''a = [5, 6, 7]
+a[1] = 10
+print(a)
+-> B) [5, 10, 7]'''
+
+#10. Which method inserts an element at a specific position? -> C) insert()
+
+#11. What will happen?
+'''a = []
+a.append(5)
+-> C) 5 is added to list'''
+
+#12. What will be the output?
+'''a = [1, 2, 3]
+print(type(a))
+-> C) list (printed as <class 'list'>)'''
+
+#13. Which statement is TRUE about lists? -> C) Lists can store multiple data types
+
+#14. What will be the output?
+'''a = [1, 2]
+a.extend([3, 4])
+print(a)
+-> C) [1, 2, 3, 4]'''
+
+#15. Which method adds multiple elements into a list? -> B) extend()
+
+#16. What will be the output?
+'''a = [10, 20, 30]
+print(a[-1])
+-> C) 30'''
+
+#17. Which keyword is used to check membership in a list? -> B) in
+
+#18. What will be the output?
+'''a = [1, 2]
+a.insert(1, 5)
+print(a)
+-> C) [1, 5, 2]'''
+
+#19. What will be the output?
+'''a = [1, 2, 3]
+for i in range(len(a)):
+	a[i] = a[i] * 2
+print(a)
+-> A) [2, 4, 6]'''
+
+#20. What will be the output?
+'''a = [1, 2, 3]
+for i in a:
+	print(i)
+-> A)
+1
+2
+3'''
+
+
+
+
+5)
+
+
+#1. Given the list nums = [10, 20, 30, 40, 50, 60], what will nums[1:4] return? -> B) [20, 30, 40]
+
+#2. Which of the following expressions correctly reverses a list lst using slicing? -> C) lst[::-1]
+
+#3. What is the output of the following Python code snippet?
+'''letters = ['a', 'b', 'c', 'd', 'e']
+print(letters[2:])
+-> B) ['c', 'd', 'e']'''
+
+#4. What will be the output of the following slice operation?
+'''data = [1, 2, 3, 4, 5, 6, 7, 8]
+print(data[1:7:2])
+-> A) [2, 4, 6]'''
+
+#5. Consider the statement: mystr = [5, 10, 15, 20]. What does mystr[:-1] yield? -> B) [5, 10, 15]
+
+#6. If you execute my_list.remove(x), what happens if the value x appears multiple times in my_list? -> C) Only the first occurrence of x is removed.
+
+#7. What happens if you call .remove(100) on a list that does not contain the element 100? -> C) It raises a ValueError.
+
+#8. Which list method removes and returns the last element of a list by default? -> C) pop()
+
+#9. What will be the output of the following code snippet?
+'''fruits = ['apple', 'banana', 'cherry']
+result = fruits.pop(1)
+print(fruits, result)
+-> A) ['apple', 'cherry'] banana'''
+
+#10. How do you completely delete all items from a list named items, leaving it completely empty? -> B) items.clear()
+
+#11. What is the main difference between the del statement and the .remove() method? -> A) del deletes by index, whereas remove() deletes by value.
+
+#12. What is the output of the following code?
+'''arr = [10, 20, 30, 40]
+del arr[1:3]
+print(arr)
+-> A) [10, 40]'''
+
+#13. Which list method adds an item to the end of the list? -> C) append()
+
+#14. What will be the final state of list x after running this code?
+'''x = [1, 2]
+x.extend([3, 4])
+print(x)
+-> B) [1, 2, 3, 4]'''
+
+#15. What does items.insert(0, 'A') do on a non-empty list items? -> B) Adds 'A' at the very beginning of the list, shifting existing items to the right.
+
+#16. What will be the output of the following sequence?
+'''vowels = ['e', 'a', 'u', 'o', 'i']
+vowels.sort()
+print(vowels)
+-> C) ['a', 'e', 'i', 'o', 'u']'''
+
+#17. How does the list method .sort() differ from the built-in function sorted()? -> A) sort() modifies the original list in-place; sorted() returns a new sorted list.
+
+#18. What is the output of the following code block?
+'''numbers = [1, 2, 3, 2, 4, 2]
+print(numbers.count(2))
+-> C) 3'''
+
+#19. If values = [10, 20, 30, 40], what is returned by values.index(30)? -> A) 2
+
+#20. What is the slice outcome of my_list[5:2] if my_list contains 10 items? -> B) An empty list []
+
+
+6)
+
+
+
+
+#1. What is the output of [x for x in range(6) if x % 2 != 0]? -> A) [1, 3, 5]
+
+#2. Which expression doubles even numbers and keeps odd numbers as-is? -> B) [x * 2 if x % 2 == 0 else x for x in my_list]
+
+#3. How do you create a 3x2 matrix (3 rows, 2 columns) filled with zeros? -> C) [[0 for _ in range(2)] for _ in range(3)]
+
+#4. Given matrix = [[1, 2], [3, 4]], which flattens it into [1, 2, 3, 4]? -> B) [val for row in matrix for val in row]
+
+#5. True or False: A list comprehension modifies the original list in-place. -> B) False
+
+#6. How do you filter for numbers that are both greater than 10 AND even? -> A) [x for x in nums if x > 10 if x % 2 == 0]
+
+#7. Which structure correctly adds 1 to every integer in a 3D list cube? -> B) [[[v + 1 for v in row] for row in block] for block in cube]
+
+#8. If matrix = [[10, 20], [30, 40]], how do you access the value 30? -> B) matrix[1][0]
+
+#9. What is the result of [i*j for i in [1, 2] for j in [10, 20]]? -> A) [10, 20, 20, 40]
+
+#10. True or False: Use a list comprehension to update a single value at matrix[0][0]. -> B) False
+
+#11. Which correctly transposes a 2x3 matrix into a 3x2 matrix? -> A) [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+
+#12. Given data = [[[1], [2]], [[3], [4]]], what index path reaches the value 3? -> B) data[1][0][0]
+
+#13. Which expression converts ['apple', 'be', 'cherry'] to ['APPLE', 'be', 'CHERRY']? -> B) [s.upper() if len(s) > 2 else s for s in words]
+
+#14. How do you keep ONLY positive numbers within nested sublists [[1, -1], [2, -2]]? -> B) [[x for x in g if x > 0] for g in groups]
+
+#15. What is the risk of using grid = [[0]*3]*3 to initialize a 2D list? -> B) Updating grid[0][0] will update the first element of every row due to shared references.
+
+#16. To save memory with a large range (e.g., 10 million), what should you use instead of []? -> B) (x for x in range(10000000))
+
+#17. What is the output of [name[:3] for name in ['Python', 'Ruby']]? -> A) ['Pyt', 'Rub']
+
+#18. Which result is produced by [[i for i in range(j)] for j in range(3)]? -> B) [[], [0], [0, 1]]
+
+#19. How do you find the intersection of two lists list1 and list2? -> A) [x for x in list1 if x in list2]
+
+#20. Why are list comprehensions often preferred over standard for loops? -> B) They are more readable for simple transformations and optimized internally.
+
+
+
+7)
+
+
+
+#1. What will be the output?
+'''t = (1,2,[3,4])
+t[2].append(5)
+print(t)
+-> B) (1,2,[3,4,5])'''
+
+#2. What is the output?
+'''t=(10,20,30,40)
+a,*b,c=t
+print(a, b, c)
+-> B) 10 [20,30] 40'''
+
+#3. What is the type of t?
+'''t=(1)
+type(t)
+-> C) int'''
+
+#4. What is the type of t?
+'''t=(1,)
+type(t)
+-> A) tuple'''
+
+#5. What is the value of middle?
+'''t=(1,2,3,4,5)
+first,*middle,last=t
+-> B) [2,3,4]'''
+
+#6. What is the output of the slice?
+'''nums=(1,2,3,4,5)
+nums[::-2]
+-> B) (5,3,1)'''
+
+#7. Tuple packing means? -> C) Automatically create tuple from values
+
+#8. What is the type of a?
+'''a=10,20,30
+type(a)
+-> B) tuple'''
+
+#9. What is the output?
+'''(1,2)+(3,4)
+-> A) (1,2,3,4)'''
+
+#10. What is the value of t after appending?
+'''t=([1,2],[3,4])
+t[0].append(10)
+-> ([1, 2, 10], [3, 4])'''
+
+#11. What is the value of s.name?
+'''Student=namedtuple("Student",["name","age"])
+s=Student("Ram",20)
+s.name
+-> A) Ram'''
+
+#12. What happens if you try p.x=50 in namedtuple? -> B) AttributeError
+
+#13. What is the value of User.__name__?
+'''User=namedtuple("Account",["id"])
+User.__name__
+-> B) Account'''
+
+#14. Student._fields returns? -> B) tuple
+
+#15. _replace() changes original? -> B) No creates new object
+
+#16. namedtuple object indexing possible? -> A) Yes
+
+#17. type(namedtuple object)? -> A) generated class
+
+#18. Can namedtuple unpack? -> A) Yes
+
+#19. Namedtuple is: -> B) immutable
+
+#20. Namedtuple inherits behavior of: -> A) tuple
+
+
+
+

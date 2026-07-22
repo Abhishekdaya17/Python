@@ -1,4 +1,4 @@
-'''72Print all substrings of length n. S = "abc", n = 2 "ab, bc" 73Find the longest palindromic substring. S = "babad" "bab" (or "aba")'''
+'''72Print all substrings of length n. S = "abc", n = 2 "ab, bc'''
 s=input("input:")
 n=int(input("lenght of sub string="))
 

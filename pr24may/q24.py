@@ -7,5 +7,5 @@ for i in range(0,len(s)):
         a="True"
         unique=unique+ch
     else:
-        a="False"
+        a="False"r
 print(a)
